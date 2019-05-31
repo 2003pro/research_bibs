@@ -1,9 +1,14 @@
 # Annotated bibliography for explainable recommendations
 Jipeng Zhang
 
+## Survey
+
+- [**Explainable Recommendations**](http://www.cs.cmu.edu/~rkanjira/thesis/rose_proposal.pdf) (PhD thesis of Rose Catherine Kanjirathinkal in CMU)
+- [Explainable Recommendation: A Survey and New Perspectives](https://arxiv.org/abs/1804.11192) 
+
 
 ## video base (general)
--	ConceptNet [[paper](http://alumni.media.mit.edu/~hugo/publications/papers/BTTJ-ConceptNet.pdf)] [[website](http://conceptnet.io/)]
+-	ConceptNet [[paper](http://alumni.media.mit.edu/~hugo/publications/papers/BTTJ-ConceptNet.pdf)][[website](http://conceptnet.io/)]
 -	DBpedia [[website](https://wiki.dbpedia.org/)]
 -	YAGO [[website](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago/)]
 -	Google knowledge graph [[website](https://developers.google.com/knowledge-graph/)]
