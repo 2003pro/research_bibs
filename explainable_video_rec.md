@@ -1,8 +1,8 @@
-# Annotated bibliography for commonsense learning and reasoning
-Michihiro Yasunaga
+# Annotated bibliography for explainable recommendations
+Jipeng Zhang
 
 
-## Commonsense knowledge base (general)
+## video base (general)
 -	ConceptNet [[paper](http://alumni.media.mit.edu/~hugo/publications/papers/BTTJ-ConceptNet.pdf)] [[website](http://conceptnet.io/)]
 -	DBpedia [[website](https://wiki.dbpedia.org/)]
 -	YAGO [[website](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago/)]
