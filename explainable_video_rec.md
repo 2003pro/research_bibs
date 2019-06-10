@@ -4,7 +4,7 @@ Jipeng Zhang
 ## Survey
 
 - [**Explainable Recommendations**](http://www.cs.cmu.edu/~rkanjira/thesis/rose_proposal.pdf) (PhD thesis of Rose Catherine Kanjirathinkal in CMU)
-- [Explainable Recommendation: A Survey and New Perspectives](https://arxiv.org/abs/1804.11192) 
+- [**Explainable Recommendation: A Survey and New Perspectives**](https://arxiv.org/abs/1804.11192) 
 
 
 ## video base (general)
