@@ -1,5 +1,9 @@
 # Multimedia Knowledge Graph
 
+Jipeng Zhang
+
+---
+
 > - Multimedia Knowledge Graph Construction
 >   - multimodal relation extraction
 >   - multimodal entity recognition and linking
@@ -9,9 +13,24 @@
 
 ---
 
-1. multimedia knowledge graph construction
+## 1. multimedia knowledge graph construction
 
-[Image-embodied Knowledge Representation Learning](https://arxiv.org/pdf/1609.07028.pdf) *IJCAI 17*
+
+
+__
+
+[**Image-embodied Knowledge Representation Learning**](https://arxiv.org/pdf/1609.07028.pdf) [[project page](<https://github.com/thunlp/IKRL>)] 
+
+Ruobing Xie, Zhiyuan Liu, Huanbo Luan, Maosong Sun (IJCAI'17)
+
+Introduces the new task: image based multimedia knowledge graph. Given the corresponding images of entities, we need to generate the representation of these images in KG. (We notice that this task did not consider constructing new and specific relations for these images.) This paper creates a new dataset WN9-IMG and develops a multimedia graph embedding methods based on TransE. 
+
+- data source: WN9-IMG (A subset of WN18 constructed by their own. Each entity contains a certain number of images.)
+- modeling technique: $E_{SS} = ||h_S+r-t_S||$, $E_{II} = ||h_I+r-t_I||$, $E_{SI} = ||h_S+r-t_I||$, $E_{IS} = ||h_I+r-t_S||$. The core component is the attention based image encoder that combine all the image features of the specific entity into a single image feature.
+- evaluation downstream task: 
+  - **Knowledge Graph Completion** (complete a triple $(h,r,t)$ when one of $h, r, t$ is missing), 
+  - **Triple Classification** (predict whether a triple fact $(h,r,t)$ is correct or not according to the dissimilarity function)
+  - Case Study task, **Semantic Regularities of Images**, **Capability of Attention**
 
 [Adaptive Co-Attention Networkfor Named Entity Recognition in Tweets](https://pdfs.semanticscholar.org/5ca1/c595708d22d92b3f913be391575560bdab2c.pdf?_ga=2.258610882.953046097.1557891086-1745154373.1553132250) *AAAI 18*
 
@@ -21,13 +40,20 @@
 
 [Multimodal Named Entity Recognition for Short Social Media Posts](https://www.aclweb.org/anthology/N18-1078) *NAACL 2018*
 
-
-
 2. multimedia knowledge graph representation learning
 
 [Image-embodied Knowledge Representation Learning](https://arxiv.org/pdf/1609.07028.pdf) *IJCAI 17*
 
 [A Multimodal Translation-Based Approach for Knowledge Graph Representation Learning](https://pdfs.semanticscholar.org/be91/946bedbf65d543a7eb9dd1e033e7aaf78c3c.pdf?_ga=2.239204043.953046097.1557891086-1745154373.1553132250) *SEM@NAACL 2018*
+
+(They also found that TransE fails to create suitable representation for entities that appear frequently as the head/tail of one-to-many/many-to-one relations.) This paper's motivation is to explore KG representation learning that leverages linguistic and visual information. Propose to fuse visual and linguistic features to represent entities, present a new large-scale dataset for multimodal KGC based on Freebase and consider other kinds of lingu+-istic information. 
+
+- data source: WN9-IMG, FB-IMG (Require entities from FB15k, a subset of Freebase, and collect 10 images for each entity. This dataset is much larger than WN9-IMG.)
+- modeling technique: 
+  - new entity representation learning method: $h_m = h_w\oplus h_i$, $t_m = t_w\oplus t_i$, $\oplus$ can be concatenation, DeViSE and Imagined method
+  - new energy function: $E_{M1}=||h_m+r_s-t_m||$, $E_{M2}=||(h_m+h_s)+r_s-(t_m+t_s)||$, $E_{SM}=||h_s+r_s-t_m||$, $E_{Ms}=||h_m+r_s-t_s||$,
+- evaluation downstream task
+  - **Link Prediction**, **Triple Classification**
 
 [Embedding Multimodal Relational Data for Knowledge Base Completion](<https://arxiv.org/abs/1809.01341>) *EMNLP 18*
 
